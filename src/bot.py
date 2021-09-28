@@ -10,9 +10,8 @@ class GeoBot(discord.Client):
         print(f"Logged in as {self.user} (ID: {self.user.id})")
         print('------')
 
-streetviewer = StreetViewer(api_key=auth["GOOGLE_API_KEY"], location="47.5763831,-122.4211769")
-streetviewer.fetchImageMetaData()
-streetviewer.fetchImage()
+streetviewer = StreetViewer(api_key=auth["GOOGLE_API_KEY"], location="10 Clifford Street, Torrensville SA")
+streetviewer.generateRandomLongLat()
 
 client = GeoBot()
 client.run(auth["DISCORD_TOKEN"])
