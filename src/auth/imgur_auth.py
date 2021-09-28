@@ -2,7 +2,7 @@ from imgurpython import ImgurClient
 
 from util import *
 
-def load_creds(file):
-    auth = read_yml(file)
+def loadCreds(file):
+    auth = loadYML(file)
 
     return ImgurClient(auth["IMGUR_CLIENT_ID"], auth["IMGUR_CLIENT_SECRET"])

@@ -1,6 +1,6 @@
 import yaml
 
-def read_yml(file):
+def loadYML(file):
     with open(file) as file:
             auth = yaml.load(file, Loader=yaml.FullLoader)
     
